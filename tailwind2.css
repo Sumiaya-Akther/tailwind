@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.nav_area{
+    position: relative;
+}
+.nav_link::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.nav_link:hover::after{
+    width: 100%;
+}
+/* drop-down css */
+ul li > .drop-down{
+    display: none;
+    position: absolute;
+}
+ul li:hover > .drop-down{
+    display: block;
+    background-color: white;
+    width: 180px;
+    border-radius: 5px;
+}
+ul li:hover > .drop-down li{
+    padding: 15px;
+}
+.icon-1{
+    display: none;
+}
+.ZoomImg:hover{
+    transform: scale(1.1);
+}
+
+/* card hover css */
+.heart{
+    opacity: 0;
+    /* display: none; */
+}
+.num{
+    opacity: 0;
+    /* display: none; */
+}
+.btn{
+    opacity: 0;
+    /* display: none; */
+}
+.zero{
+    opacity: 0;
+    /* display: none; */
+}
+.card-a:hover .heart{
+       opacity: 1;
+    /* display: block; */
+}
+.card-a:hover .num{
+    opacity: 1;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+}
+.card-a:hover .btn{
+    opacity: 1;
+    /* display: block; */
+}
+.card-a:hover .zero{
+    opacity: 1;
+    /* display: block; */
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+.shoes{
+position: relative;
+width: 100%;
+/* z-index: 1; */
+/* height: 250px; */
+}
+.rotate_shoes{
+position: absolute;
+/* z-index: -1; */
+display: none;
+top: 0;
+left: 0;
+width: 90%;
+height: 250px;
+
+}
+.shoes:hover .rotate_shoes{
+    display: block;
+}
+.animate-scale img{
+    transition: transform 0.8s ease;
+    filter: 0.8s ease;
+}
+.animate-scale img:hover{
+    transform: scale(1.3);
+    filter: brightness(0.7);
+}
+/* customer review css */
+.carousel-inner{
+    transition: transform 0.5s ease-in-out;
+}
+.reviews-carousel{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.reviews-btn{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+.prevSlide{
+    left: 0px;
+}
+.nextSlide{
+    right: 0px;
+}
